@@ -1,0 +1,21 @@
+# SC-AST-Injector Requirements
+# Conda environment: sc-dev
+
+# Core dependencies
+py-solc-x>=1.1.0
+solcast>=0.2.0
+packaging>=21.0
+
+# Graph and network analysis
+networkx>=2.6
+
+# Deep Learning (for src/ modules)
+torch>=1.10.0
+torch-geometric>=2.0.0
+tensorboard>=2.8.0
+
+# NLP/Transformers (for dataset processing)
+transformers>=4.20.0
+
+# Utilities
+tqdm>=4.62.0
