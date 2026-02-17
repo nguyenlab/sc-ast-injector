@@ -352,24 +352,35 @@ python main.py --mode point \
 
 ## Detection Results
 
-Based on full dataset testing (January 2026):
+Based on full dataset testing (February 2026):
 
-- **Total injected contracts**: 122,616
-- **Compilation success**: 117,770 (96.0%)
-- **Slither detection**: 117,526 (99.8%)
-- **Slither correctness**: 117,520 (99.8%)
+- **Total injected contracts**: 225,300
+- **Compilation success**: 217,663 (96.6%)
+- **Slither correctness**: 200,396 (92.1%)
 
 ### By Vulnerability Type
 
 | Type | Injected | Compiled | Compile Rate | Detection Rate |
 |------|----------|----------|--------------|----------------|
-| tx_origin | 23,152 | 22,156 | 95.7% | 99.7% |
-| timestamp | 19,586 | 18,772 | 95.8% | 99.7% |
-| overflow | 19,586 | 18,765 | 95.8% | 100.0% |
-| unchecked_send | 19,586 | 18,789 | 95.9% | 99.7% |
-| reentrancy | 14,957 | 14,620 | 97.7% | 99.7% |
-| unhandled_exception | 13,613 | 13,023 | 95.7% | 99.7% |
-| underflow | 12,136 | 11,645 | 96.0% | 100.0% |
+| tx_origin | 36,574 | 36,476 | 99.7% | 87.6% |
+| Timestamp | 32,370 | 32,331 | 99.9% | 87.8% |
+| Overflow | 32,370 | 25,900 | 80.0% | 100.0% |
+| Unchecked Send | 32,370 | 32,348 | 99.9% | 87.9% |
+| Reentrancy | 18,793 | 18,754 | 99.8% | 90.7% |
+| Unhandled Exception | 23,601 | 23,557 | 99.8% | 87.7% |
+| Underflow | 21,249 | 21,195 | 99.7% | 100.0% |
+
+### Coupled Injection
+
+| Type | Injected | Compiled | Compile Rate | Detection Rate |
+|------|----------|----------|--------------|----------------|
+| Transaction Order Dependence (TOD) | 2,387 | 2,369 | 99.2% | 100.0% |
+| Denial of Service (DoS) | 4,983 | 4,949 | 99.3% | 100.0% |
+| Access Control | 7,326 | 7,305 | 99.7% | 100.0% |
+| Timestamp Dependence | 805 | 170 | 21.1% | 77.1% |
+| Reentrancy | 1,118 | 1,118 | 100.0% | 82.9% |
+| Reentrancy (State Update) | 4,954 | 4,812 | 97.1% | 100.0% |
+| Overflow (Lock Time) | 6,400 | 6,379 | 99.7% | 100.0% |
 
 **Note**: Detection rate is calculated as correctly detected vulnerabilities divided by successfully compiled contracts.
 
@@ -385,9 +396,3 @@ Based on full dataset testing (January 2026):
 The repository includes a dataset of real-world contracts from SmartBugs Wild in `data/smartbugs-wild-clean-contracts/` for testing and experimentation.
 
 The full injected dataset is available on Hugging Face: [minhnn32/sc-ast-injected](https://huggingface.co/datasets/minhnn32/sc-ast-injected).
-
-=======
-# sc-ast-injector
-
-
->>>>>>> c6cd8a5e1af60b13ed1eac26444dbbf152edf2d7
