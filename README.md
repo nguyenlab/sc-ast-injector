@@ -383,6 +383,11 @@ Based on full dataset testing (January 2026):
 ## Dataset
 
 The repository includes a dataset of real-world contracts from SmartBugs Wild in `data/smartbugs-wild-clean-contracts/` for testing and experimentation.
+
+The full injected dataset is available on Hugging Face: [minhnn32/sc-ast-injected](https://huggingface.co/datasets/minhnn32/sc-ast-injected).
+
 =======
 # sc-ast-injector
+
+
 >>>>>>> c6cd8a5e1af60b13ed1eac26444dbbf152edf2d7
