@@ -243,51 +243,6 @@ sc-ast-injector/
         └── coupled/             # Coupled injections
 ```
 
-## Vulnerability Templates
-
-### Point Injection Templates (31 total)
-
-**Reentrancy (5 templates)**
-- `reentrancy_call_check` - Call with balance check (all versions)
-- `reentrancy_send_check` - Send with balance check
-- `reentrancy_require_send` - Require with send
-- `reentrancy_bool_guard` - Boolean guard pattern
-- `reentrancy_jackpot` - Jackpot withdrawal pattern
-
-**Integer Overflow (5 templates)**
-- `addition_overflow` - Simple addition overflow
-- `addition_overflow_input` - Addition with user input
-- `multiplication_overflow` - Multiplication overflow
-- `uint8_overflow` - uint8 overflow
-- `lock_time_overflow` - Locktime/timestamp overflow
-
-**Integer Underflow (2 templates)**
-- `subtraction_underflow` - Subtraction underflow
-- `transfer_underflow` - Transfer amount underflow
-
-**tx.origin Authentication (3 templates)**
-- `tx_origin_auth` - tx.origin authentication
-- `tx_origin_transfer` - tx.origin with transfer (version-specific)
-- `tx_origin_with_param` - tx.origin with parameter
-
-**Unchecked Send (2 templates)**
-- `unchecked_send_literal_legacy` - Unchecked send with literal
-- `unchecked_send_balance_legacy` - Unchecked send with balance
-
-**Unhandled Exception (1 template)**
-- `unchecked_call_04x` - Unchecked low-level call (version-specific)
-
-**Timestamp Dependence (2 templates)**
-- `timestamp_comparison` - block.timestamp comparison
-- `timestamp_equality` - block.timestamp equality (version-specific)
-
-### Coupled Injection (Cross-Function)
-
-- `tod_transfer` - Time-of-Check Time-of-Use with transfer
-- `tod_selfdestruct` - TOD with selfdestruct
-- `array_dos` - Array-based DoS attack
-- `mapping_dos` - Mapping-based DoS attack
-
 ## Examples
 
 ### Example 1: Basic Point Injection
