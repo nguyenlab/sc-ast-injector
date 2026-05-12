@@ -350,7 +350,9 @@ Based on full dataset testing (February 2026):
 
 The repository includes a dataset of real-world contracts from SmartBugs Wild in `data/smartbugs-wild-clean-contracts/` for testing and experimentation.
 
-The full injected dataset is available on Hugging Face: [minhnn32/sc-ast-injected](https://huggingface.co/datasets/minhnn32/sc-ast-injected).
+The full injected dataset is available on Hugging Face: [nguyenlab/sc-ast-injected](https://huggingface.co/datasets/nguyenlab/sc-ast-injected).
 
-## Citation
-Please cite our paper if you use this code. 
+## Smart Contract Vulnerability Detection
+
+The full implementation code for vulnerability detection is available at [nguyenlab/sc-hca-sgnn](https://github.com/nguyenlab/sc-hca-sgnn).
+
